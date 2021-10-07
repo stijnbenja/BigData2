@@ -5,7 +5,10 @@
 
 
 
-#### b. Brief summary of the problem you are trying to solve 
+#### b. Outline research question 
 
 
-#### c. Brief summary of the problem you are trying to solve 
+#### c. Motivate why the problem is relevant
+
+
+
