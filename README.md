@@ -9,11 +9,22 @@ The problem that needs solving is trying to predict which products a customer wi
 
 
 
+
 ## 2. Problem formalization
-#### a. What assumptions are necessary? 
-#### b. How well have you argued the reasonableness of your assumptions? ? 
+#### a. What assumptions are necessary?
+<ul> 
+    <li>
+    <li>
+    <li>
+</ul>
+
+#### b. How well have you argued the reasonableness of your assumptions?  
 #### c. Do you tackle the problem by supervised or unsupervised learning? 
+The problem will be tackled using supervised learning as the training data is already labelled.
+
 #### d. Do you need to post-process model predictions to derive your final results? 
+
+
 
 ## 3. Data (and descriptive analysis)
 #### a. 
