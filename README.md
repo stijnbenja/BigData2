@@ -1,4 +1,4 @@
-# Module 2 Assignment (learning from Big Data)
+# Learning from Big Data (Assignment Module 2)
 
 ## 1. Introduction
 
