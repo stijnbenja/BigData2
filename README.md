@@ -2,6 +2,7 @@
 
 ## 1. Introduction
 #### a. Brief summary of the problem you are trying to solve 
+The problem that needs solving is trying to predict which products a customer will buy in a specific week (week 90) at a grocery store. There are  
 #### b. Outline research question 
 #### c. Motivate why the problem is relevant
 
