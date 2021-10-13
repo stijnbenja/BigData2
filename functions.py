@@ -15,13 +15,13 @@ def create_base(weeks=range(90), customers=range(2000)):
     
     return base
 
-def add_basket_info(base, baskets=baskets):
+def add_basket_info(base, baskets):
     base = pd.merge(base, baskets, on=['week', 'customer','product'], how='left')
     base['price'] = base['price'].fillna(0).astype(int)
     base['isBought'] = (base['price'] > 0)
     return base
     
-def add_coupon_info(base, baskets=baskets, coupons=coupons):
+def add_coupon_info(base, baskets, coupons):
     base = pd.merge(base, coupons, on=['week', 'customer','product'], how='left')
     base['discount'] = base['discount'].fillna(0).astype(int)
     base = base.rename(columns={"discount": "dGiven"})

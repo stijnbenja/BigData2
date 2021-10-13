@@ -1,0 +1,15 @@
+co-occurency matrix
+
+identify blocks of zeros 
+there are 25 clusters
+
+basket id  (pair of customer and week)
+
+1 . same prod 
+2. same cat 
+3. just past 
+
+Customer
+Product
+Customer - Product
+Category
