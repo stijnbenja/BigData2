@@ -15,6 +15,25 @@ def create_base(weeks=range(90), customers=range(2000)):
     
     return base
 
+def add_basket_info(base, baskets=baskets):
+    base = pd.merge(base, baskets, on=['week', 'customer','product'], how='left')
+    base['price'] = base['price'].fillna(0).astype(int)
+    base['isBought'] = (base['price'] > 0)
+    return base
+    
+def add_coupon_info(base, baskets=baskets, coupons=coupons):
+    base = pd.merge(base, coupons, on=['week', 'customer','product'], how='left')
+    base['discount'] = base['discount'].fillna(0).astype(int)
+    base = base.rename(columns={"discount": "dGiven"})
+    base['isGiven'] = (base['dGiven'] > 0)
+
+    normal_prices = baskets.groupby('product')['price'].max().values
+    base['highestPrice'] = base['product'].apply(lambda x: normal_prices[x])
+    base['isUsed'] = ((base['price'] != base['highestPrice']) & (base['price']!=0))
+    base.drop('highestPrice', axis=1, inplace=True)
+    return base
+
+
 def get_baskets():   
     datasets_path = lambda  file_name: f'/Users/stijnvanleeuwen/Desktop/codes/EUR/Ass2/datasets/{file_name}.parquet'
     return pd.read_parquet(datasets_path('baskets')).astype({'week':'uint8', 'customer':'uint','product':'category', 'price':'uint16'}) 
