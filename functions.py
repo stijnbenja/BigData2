@@ -49,4 +49,9 @@ def get_prediction_index():
 def get_3_files():
     return get_baskets(), get_coupons(), get_prediction_index()
         
- 
+def split_4_way(base, target_col, unkwown_week=89):
+    train = base[base['week']!=unkwown_week]
+    test =  base[base['week']==unkwown_week]
+    x_train, x_test = train.drop(target_col,axis=1), test.drop(target_col,axis=1)
+    y_train, y_test = train[target_col], test[target_col]
+    return x_train, y_train, x_test, y_test 
