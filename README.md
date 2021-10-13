@@ -12,7 +12,7 @@ identify blocks of zeros
 there are 25 clusters
 
 Groups
-1 . same prod 
+1. same prod 
 2. same cat 
 3. just past 
 
