@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-def create_base(weeks=range(89), customers=range(2000)):
+def create_base(weeks=range(90), customers=range(2000)):
     
     products = range(250)
 
