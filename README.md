@@ -23,3 +23,5 @@ Groups
     <li>Customer - Product
     <li>Category
 </ul>
+
+Best = 0.066
